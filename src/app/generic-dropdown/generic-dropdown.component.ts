@@ -7,18 +7,18 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class GenericDropdownComponent implements OnInit {
   title = 'Dropdown';
+  selectedValue: any;
+  optionLength: boolean = false;
   @Input() options: any = [];
   @Input() placeholder = 'please choose';
   @Output() onSelection = new EventEmitter();
 
   constructor() {}
-  ngOnInit() {}
-  dropDown: boolean = false;
-  dropdownClicked(e: any) {
-    this.dropDown = !this.dropDown;
+  ngOnInit() {
+    if(this.options.length > 6) {
+      this.optionLength = true;
+    }
   }
-  selectedValue: any;
-
   setCurrentSelection(option: any) {
     this.selectedValue = option.value;
     this.onSelection.emit(option);

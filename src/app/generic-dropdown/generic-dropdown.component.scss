@@ -26,8 +26,8 @@ body {
     bottom: 10px;
     right: 0;
     padding: 30px; 
-    overflow-y: scroll;
-    overflow-x: hidden;
+    // overflow-y: scroll;
+    // overflow-x: hidden;
   
 }
 
@@ -122,10 +122,15 @@ body {
     border-top: 8px solid transparent;
     border-left: 1px solid #f6f7f9;
     outline: 1px solid #f6f6f9;
+    height: auto;
+}
+
+.max-option-7 {
+    height: 340px;
 }
 
 .dropdown__select-option {
-    padding: 20px;
+    padding: 14px;
     background-color: #fff;
     transition: 0.3s;
     // margin-left: -40px;

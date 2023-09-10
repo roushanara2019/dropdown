@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { endWith } from 'rxjs';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
