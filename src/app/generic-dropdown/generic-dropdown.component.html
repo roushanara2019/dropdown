@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <!-- custom dropdown -->
+    <div class="dropdown" >
+      <input
+        type="checkbox"
+        class="dropdown__switch"
+        id="filter-switch"
+        hidden
+      />
+      <label for="filter-switch" class="dropdown__options-filter" (click)="dropdownClicked($event)">
+        <div class="dropdown__filter" role="listbox" tabindex="-1">
+          <input class="dropdown__input" aria-selected="true" [ngModel]="selectedValue" placeholder="{{placeholder}}" disabled/>
+          <div >  
+              <div class="dropdown__select" style=" height: 300px;">
+                <div class="dropdown__select-option" role="option" (click)="setCurrentSelection(option)" *ngFor="let option of options; let i = index">{{ option.value }}</div>
+                </div>
+            </div>
+        </div>
+      </label>
+    </div>
+    <!-- end custom dropdown -->
+  </body>
+  
+</html>
